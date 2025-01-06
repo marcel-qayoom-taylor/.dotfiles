@@ -14,6 +14,22 @@ sketchybar --add event aerospace_workspace_change
 # Since the notch is -only- on the laptop, if a monitor isn't used,
 # then that means the internal display is used ¯\_(ツ)_/¯
 
+
+#   sketchybar --add item space.1 left \
+#     --subscribe space.1 aerospace_workspace_change \
+#     --set space.1 \
+#     background.color=0x66494d64 \
+#     background.corner_radius=4 \
+#     background.height=26 \
+#     background.drawing=off \
+#     icon.font.size=10 \
+#     label.font.size=16 \
+#     icon.padding_right=2 \
+#     label.padding_left=2 \
+#     icon=1 \
+#     label=$(aerospace list-workspaces --monitor 1 --visible) \
+#     script="$CONFIG_DIR/plugins/aerospace.sh 1"
+
 if [[ $MAIN_DISPLAY = "Built-in" ]]; then
     source "$SKETCHYBAR_CONFIG/sketchybarrc-laptop"
 else
